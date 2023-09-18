@@ -1,3 +1,8 @@
+class MoneyDrawError(Exception):
+
+    def __init__(self, amount, available):
+        super().__init__(f'Der Betrag {amount} kann nicht bezogen werden.\nAktuell verfügbar: {available}')
+
 class BankAccount:
     '''
     fügen Sie hier als Erstes den Konstruktor ein.
@@ -32,8 +37,8 @@ class BankAccount:
         self._balance += amount
 
     def get_money(self, amount):
-        if (self._balance + self._overdraft) > amount:
+        if (self._balance + self._overdraft) >= amount:
             self._balance -= amount
             return amount
         else:
-            return 0.0
+            raise MoneyDrawError(amount, self._balance + self._overdraft)
