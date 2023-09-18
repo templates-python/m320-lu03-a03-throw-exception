@@ -1,9 +1,3 @@
-import main
-
-def test(capsys):
-    main.calculate()
-    captured = capsys.readouterr()
-    assert captured.out == "Total: 78.75\n"
 import pytest
 from bank_account import BankAccount
 from customer import Customer
@@ -20,6 +14,7 @@ class TestMain:
 
     def test_draw_money_abort(self, a_bank_account):
         assert draw_money(a_bank_account, 0) == -1
+
     def test_draw_money_ready(self, a_bank_account, capsys):
         draw_money(a_bank_account, 1500)
         captured = capsys.readouterr()
