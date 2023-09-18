@@ -32,7 +32,7 @@ class BankAccount:
         self._balance += amount
 
     def get_money(self, amount):
-        if (self._balance + self._overdraft) > amount:
+        if (self._balance + self._overdraft) >= amount:
             self._balance -= amount
             return amount
         else:
