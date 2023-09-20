@@ -19,7 +19,7 @@ class TestMain:
         captured = capsys.readouterr()
         assert captured.out == 'Kontostand = -500.0\n'
 
-    def test_draw_money_excpt(self, a_bank_account, capsys):
+    def test_draw_money_except(self, a_bank_account, capsys):
         draw_money(a_bank_account, 5000)
         captured = capsys.readouterr()
         assert captured.out == 'WARNING: Der Betrag 5000 kann nicht bezogen werden.\nAktuell verfügbar: 2000.0\n'
