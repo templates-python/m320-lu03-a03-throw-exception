@@ -1,24 +1,58 @@
 {
-  "tests": [
-    {
-      "name": "Input/Output",
-      "setup": "",
-      "run": "python3 main.py",
-      "input": "",
-      "output": "Total: 78.75\n",
-      "comparison": "included",
-      "timeout": 1,
-      "points": 1
-    },
-    {
-      "name": "Pytest",
-      "setup": "sudo -H pip3 install -r requirements.txt",
-      "run": "pytest -v  -k \"test\"",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 2
-    }
-  ]
+"tests": [
+{"name": "test_bank_account_money_drawing_well",
+"setup": "sudo -H pip3 install -r requirements.txt",
+"run": "pytest -v  -k \"test_bank_account_money_drawing_well\"",
+"input": "",
+"output": "",
+"comparison": "included",
+"timeout": 10,
+"points": 1
+},
+{"name": "test_bank_account_max_money_drawing",
+"setup": "sudo -H pip3 install -r requirements.txt",
+"run": "pytest -v  -k \"test_bank_account_max_money_drawing\"",
+"input": "",
+"output": "",
+"comparison": "included",
+"timeout": 10,
+"points": 1
+},
+{"name": "test_bank_account_money_drawing_exception",
+"setup": "sudo -H pip3 install -r requirements.txt",
+"run": "pytest -v  -k \"test_bank_account_money_drawing_exception\"",
+"input": "",
+"output": "",
+"comparison": "included",
+"timeout": 10,
+"points": 1
+},
+{"name": "test_draw_money_abort",
+"setup": "sudo -H pip3 install -r requirements.txt",
+"run": "pytest -v  -k \"test_draw_money_abort\"",
+"input": "",
+"output": "",
+"comparison": "included",
+"timeout": 10,
+"points": 1
+},
+{"name": "test_draw_money_ready",
+"setup": "sudo -H pip3 install -r requirements.txt",
+"run": "pytest -v  -k \"test_draw_money_ready\"",
+"input": "",
+"output": "",
+"comparison": "included",
+"timeout": 10,
+"points": 1
+},
+{"name": "test_draw_money_excpt",
+"setup": "sudo -H pip3 install -r requirements.txt",
+"run": "pytest -v  -k \"test_draw_money_excpt\"",
+"input": "",
+"output": "",
+"comparison": "included",
+"timeout": 10,
+"points": 1
+}
+]
 }
